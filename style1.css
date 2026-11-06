@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Pengaturan dasar seluruh halaman */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font utama */
+}
+/* Gaya bagian header */
+header {
+    display: flex;                   /* Susun isi header secara fleksibel */
+    justify-content: space-between;  /* jarak antara elemen header */
+    align-items: center;             /* posisikan elemen header secara verikal */
+    padding: 16px;                   /* jarak di dalam header */
+    background: #1f4e79;           /* warna latar belakang berwarna biru tua */
+    color: white;                  /* teks berwarna putih */
+}
+
+/* Menu navigasi */
+nav {
+    display: flex;     /* susun menu navigai secara menyamping */
+    gap: 16px;         /* jarak antar menu navigasi */
+}
+
+/* Gaya setiap link di dalam menu */
+nav a {
+    color: white;       /* teks bewarna putih */
+    text-decoration: none; 
+}
+
+/* gaya bagian gambar */
+.gambar {
+    display: grid;                          /* susun gambar dalam benuk grid */
+    grid-template-columns: repeat(3, 1fr);  /* tiga kolong dengan lebar sama */
+    gap: 12px;                              /* jarak antar gambar */
+    padding: 16px;
+    width: 100%;                          /* jarak di bagian dalam gambar */
+}
+
+/* gaya setiap gambar */
+.gambar img {
+    width: 100%;       /*lebar gambar menyesuaikan gambar kolong */
+    height: 180px;      /* tinggi gambar */
+    object-fit: cover;  /* gambar menyesuaikan ukuran kolong */
+}
+
+/* gaya untuk tampilan layar lebih besar dari 600px */
+@media (min-width: 768px) {
+    .gambar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Gaya tampilan layar lebih kecil dari 992px */
+@media (max-width: 992px) {
+    .gambar {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Gaya tampilan layar lebih kecil dari 599px */
+@media (max-width: 599px) {
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
